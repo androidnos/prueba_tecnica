@@ -31,7 +31,7 @@ class ListCharacterFragment : BaseFragment<ListCharacterPresenter>(), IListChara
             savedInstanceState: Bundle?
     ): View {
         presenter = ListCharacterPresenter()
-        presenter?.attactView(this)
+        presenter?.attactView(this, getCache())
         binding = ListCharactersFragmentLayoutBinding.inflate(inflater, container, false)
         initComponentView()
         presenter?.getAllListByPage(null)

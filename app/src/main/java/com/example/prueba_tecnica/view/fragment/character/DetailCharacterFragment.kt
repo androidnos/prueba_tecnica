@@ -39,7 +39,7 @@ class DetailCharacterFragment : BaseFragment<DetailCharacterPresenter>(),
     ): View {
         binding = DetailCharacterFragmentBinding.inflate(inflater, container, false)
         presenter = DetailCharacterPresenter()
-        presenter?.attactView(this)
+        presenter?.attactView(this, getCache())
         presenter?.callServiceById(arguments?.getString(KEY_ID))
         return binding.root
     }
