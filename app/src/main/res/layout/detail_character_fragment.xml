@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:fillViewport="true">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dimen_10dp"
+        app:cardBackgroundColor="@color/gray_dark_color"
+        app:cardCornerRadius="@dimen/dimen_8dp"
+        app:cardElevation="@dimen/dimen_10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dimen_8dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iconImageView"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/nameTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:textColor="@color/gray_text_background_dark"
+                android:textSize="@dimen/textSize_22sp"
+                android:typeface="monospace"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/framelayout"
+                app:layout_constraintTop_toBottomOf="@id/iconImageView"
+                tools:text="Rick Sanchez" />
+
+            <FrameLayout
+                android:id="@+id/framelayout"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/genderTextView"
+                app:layout_constraintEnd_toStartOf="@+id/nameTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iconImageView">
+
+                <View
+                    android:id="@+id/stateColorView"
+                    android:layout_width="@dimen/dimen_16dp"
+                    android:layout_height="@dimen/dimen_8dp"
+                    android:layout_gravity="center"
+                    android:background="@android:color/holo_red_dark" />
+
+            </FrameLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/genderTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                android:textColor="@color/gray_text_background_dark"
+                android:textSize="@dimen/textSize_18sp"
+                android:typeface="monospace"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nameTextView"
+                tools:text="Genero: Mujer" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/originTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                android:textColor="@color/gray_text_background_dark"
+                android:textSize="@dimen/textSize_18sp"
+                android:typeface="monospace"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/genderTextView"
+                tools:text="Origen: ssss" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/specieTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                android:textColor="@color/gray_text_background_dark"
+                android:textSize="@dimen/textSize_18sp"
+                android:typeface="monospace"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/originTextView"
+                tools:text="Especie: ssss" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/locationTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                android:textColor="@color/gray_text_background_dark"
+                android:textSize="@dimen/textSize_18sp"
+                android:typeface="monospace"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/specieTextView"
+                tools:text="Ultima localización: ssss" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/fisrtEpisodeTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                android:textColor="@color/gray_text_background_dark"
+                android:textSize="@dimen/textSize_18sp"
+                android:typeface="monospace"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/locationTextView"
+                tools:text="Primer episodio: ssss" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lastEpisodeTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                android:textColor="@color/gray_text_background_dark"
+                android:textSize="@dimen/textSize_18sp"
+                android:typeface="monospace"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fisrtEpisodeTextView"
+                tools:text="Ultimo episodio: ssss" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/legendTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_16dp"
+                android:text="@string/legend_text"
+                android:textColor="@color/gray_text_background_dark"
+                android:textSize="@dimen/textSize_18sp"
+                android:typeface="monospace"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lastEpisodeTextView" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dimen_20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/legendTextView"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <View
+                    android:id="@+id/stateAliveColorView"
+                    android:layout_width="@dimen/dimen_16dp"
+                    android:layout_height="@dimen/dimen_8dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:background="@android:color/holo_green_dark"
+                    app:layout_constraintEnd_toStartOf="@+id/stateAliveTextView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/stateAliveTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_16dp"
+                    android:layout_marginTop="@dimen/dimen_4dp"
+                    android:text="@string/alive_search_text"
+                    android:textColor="@color/gray_text_background_dark"
+                    android:textSize="@dimen/textSize_12sp"
+                    android:typeface="monospace"
+                    app:layout_constraintStart_toEndOf="@+id/stateAliveColorView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/stateDeadColorView"
+                    android:layout_width="@dimen/dimen_16dp"
+                    android:layout_height="@dimen/dimen_8dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:background="@android:color/holo_red_dark"
+                    app:layout_constraintEnd_toStartOf="@+id/stateDeadTextView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/stateAliveTextView" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/stateDeadTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_16dp"
+                    android:layout_marginTop="@dimen/dimen_4dp"
+                    android:text="@string/dead_search_text"
+                    android:textColor="@color/gray_text_background_dark"
+                    android:textSize="@dimen/textSize_12sp"
+                    android:typeface="monospace"
+                    app:layout_constraintStart_toEndOf="@+id/stateDeadColorView"
+                    app:layout_constraintTop_toBottomOf="@id/stateAliveTextView" />
+
+                <View
+                    android:id="@+id/stateUnknownColorView"
+                    android:layout_width="@dimen/dimen_16dp"
+                    android:layout_height="@dimen/dimen_8dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintEnd_toStartOf="@+id/stateUnknownTextView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/stateDeadTextView" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/stateUnknownTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_16dp"
+                    android:layout_marginTop="@dimen/dimen_4dp"
+                    android:text="@string/unknown_search_text"
+                    android:textColor="@color/gray_text_background_dark"
+                    android:textSize="@dimen/textSize_12sp"
+                    android:typeface="monospace"
+                    app:layout_constraintStart_toEndOf="@+id/stateUnknownColorView"
+                    app:layout_constraintTop_toBottomOf="@id/stateDeadTextView" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.core.widget.NestedScrollView>
