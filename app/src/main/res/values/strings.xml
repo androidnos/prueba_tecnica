@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Rick y Morty</string>
+
+    <string name="dialog_error_title">Error en la petición al servidor</string>
+    <string name="dialog_error_filter_empty_title">Lo sentimos, pero con estos filtros no existe ningun dato.</string>
+    <string name="exit_app">¿Quieres salir de la app?</string>
+    <string name="acept_dialog_error">Reintentar petición</string>
+    <string name="go_to_back">Volver</string>
+    <string name="loading_title">Cargando</string>
+    <string name="loading_message">Solo tardará unos segundos</string>
+
+    <string name="all_character_text">Personajes página </string>
+    <string name="character_number_text">Personaje número </string>
+    <string name="status_text">Estado:</string>
+    <string name="specie_text">Especie:</string>
+    <string name="gender_text">Género:</string>
+    <string name="last_episode_text">Ultimo episodio:</string>
+    <string name="first_episode_text">Primer episodio:</string>
+    <string name="orige_text">Origen:</string>
+    <string name="location_text">Localización actual:</string>
+    <string name="prev_button_text">Anterior</string>
+    <string name="next_button_text">Siguiente</string>
+    <string name="search_button_text">Filtrar</string>
+    <string name="name_to_search_text">Nombre a buscar:</string>
+    <string name="state_to_search_text">Estado a buscar:</string>
+    <string name="gender_to_search_text">Género a buscar:</string>
+    <string name="alive_search_text">Vivo</string>
+    <string name="dead_search_text">Muerto</string>
+    <string name="unknown_search_text">Sin especificar</string>
+    <string name="female_search_text">Mujer</string>
+    <string name="male_search_text">Hombre</string>
+    <string name="genderless_search_text">Sin género</string>
+    <string name="legend_text">Leyenda: </string>
+
+    <string-array name="gender_list">
+        <item>Todos</item>
+        <item>Female</item>
+        <item>Male</item>
+        <item>Genderless</item>
+        <item>Unknown</item>
+    </string-array>
+
+    <string-array name="status_list">
+        <item>Todos</item>
+        <item>Alive</item>
+        <item>Dead</item>
+        <item>Unknown</item>
+    </string-array>
+</resources>
