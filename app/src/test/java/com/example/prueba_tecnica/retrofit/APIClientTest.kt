@@ -1,22 +1,15 @@
 package com.example.prueba_tecnica.retrofit
 
+import com.example.prueba_tecnica.base.BaseTest
 import org.junit.Assert.assertNotNull
-import org.junit.Before
 import org.junit.Test
 
-class APIClientTest {
-
-    private lateinit var apiClientTest: APIClient
-
-    @Before
-    fun setUp() {
-        apiClientTest = APIClient()
-    }
+class APIClientTest : BaseTest() {
 
     @Test
     fun getClient() {
         /* When */
-        val itemReturn = APIClient.getClient()
+        val itemReturn = APIClient.getClient(mockkRelaxed())
 
         /* Then */
         assertNotNull(itemReturn)

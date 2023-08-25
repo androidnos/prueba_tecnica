@@ -19,7 +19,7 @@ class BasePresenterTest : BaseTestPresenterTest() {
     @Test
     fun `Test attactView`() {
         // When
-        testerBaseTest.attactView(mockkRelaxed())
+        testerBaseTest.attactView(mockkRelaxed(), mockkRelaxed())
 
         // Then
         Assert.assertNotNull(testerBaseTest.view)

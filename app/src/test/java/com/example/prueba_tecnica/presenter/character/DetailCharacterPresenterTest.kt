@@ -24,7 +24,7 @@ class DetailCharacterPresenterTest : BaseTestPresenterTest() {
     @Before
     fun init() {
         testerPresenter = spyk(recordPrivateCalls = true)
-        testerPresenter.attactView(view)
+        testerPresenter.attactView(view, mockkRelaxed())
         testerPresenter.apiInterface = apiInterface
     }
 

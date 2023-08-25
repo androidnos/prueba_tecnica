@@ -12,17 +12,26 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.prueba_tecnica.R
 import com.example.prueba_tecnica.databinding.LoadingCustomBinding
+import com.example.prueba_tecnica.retrofit.APIClient
+import okhttp3.Cache
 
 abstract class BaseFragment<BasePresenter> : Fragment(), IBaseFragment {
 
     open var presenter: BasePresenter? = null
     private var alertDialogCustom: AlertDialog? = null
+    protected fun getCache(): Cache {
+        val cacheSize =
+            (APIClient.SIZE_MB * APIClient.ONE_MB_IN_KB * APIClient.ONE_MB_IN_KB).toLong()
+        return Cache(requireContext().cacheDir, cacheSize)
+    }
 
     companion object {
         private const val TIMER = 3000L
         private const val RADIO_ROTATION = 360f
         private const val VALUE = 0.5f
     }
+
+    protected fun getActivityInit(): MainActivity = (activity as MainActivity)
 
     /**
      * method to show generic loading of the app
